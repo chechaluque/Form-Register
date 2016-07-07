@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fromulario Responsive</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	
+	<script src="js/validate.js"></script>
+	
+
+</head>
+<body>
+	<h1>Signer Register Form</h1>
+	<form action="agregar.php" method="post" class="form-register" id="form-register" onsubmit="return validar();">
+		<h2 class="form-titulo">CREATE AN ACOUNT</h2>
+		<div class="contenedor-inputs">
+			<input type="text" id="nombre" name="nombre" placeholder="Name" class="input-48" required onkeypress="return validar1(event)" onKeyUp="this.value = this.value.toUpperCase();">
+			<input type="text" id="apellidos" name="apellidos" placeholder="Last Name" class="input-48" required onkeypress="return validar1(event)" onKeyUp="this.value = this.value.toUpperCase();">
+			<input type="mail" id="mail" name="mail" placeholder="Mail" class="input-100" required>
+			<input type="text" id="usuario" name="usuario" placeholder="User" class="input-48" required>
+			<input type="password" id="password" name="password" placeholder="Password" class="input-48" required>
+			<input type="text" id="telefono" name="telefono" placeholder="Phone" class="input-100" required onKeyPress="return SoloNumeros(event);">
+			<input type="submit" value="Sign me up" class="btn-enviar" id="btn-enviar">
+			<p class="form-link">Already have in account? <a href="login.php">Login Here</a></p>
+			<div id="mensaje"></div>
+		</div>
+	</form>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>
